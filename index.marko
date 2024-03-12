@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #ccc; 
+        }
+        .top-image {
+            width: 100%;
+            background: url('./1.png') no-repeat center right;
+            background-size: cover;
+            height: 300px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left-content, .right-content {
+            flex: 1 1 50%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        @media (max-width: 600px) {
+            .left-content, .right-content {
+                flex-basis: 100%;
+            }
+            .right-content {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-image"></div>
+    <div class="container">
+        <div class="left-content">
+            <ul>
+                <li><h2>Title 1</h2><p>Subtitle 1</p></li>
+                <li><h2>Title 2</h2><p>Subtitle 2</p></li>
+                <li><h2>Title 3</h2><p>Subtitle 3</p></li>
+            </ul>
+        </div>
+        <div class="right-content">
+            <p>Feel free to add whatever content you want to display here. For example, a piece of text, a picture, or anything else you think is suitable for this location.</p>
+        </div>
+    </div>
+</body>
+
+</html>
